@@ -10,9 +10,7 @@ depends: [
   "dune" {>= "2.0"}
   "ezjs_min"
 ]
-depopts: [
-  "lwt" {>= "5.3.0"}
-]
+depopts: ["lwt"]
 build: [
   ["dune" "subst"] {pinned}
   [

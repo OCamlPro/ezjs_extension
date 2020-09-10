@@ -14,6 +14,4 @@
  (name ezjs_extension)
  (synopsis "Binding for Chrome and Firefox extension API")
  (depends ezjs_min)
- (depopts (lwt (>= 5.3.0))))
-
-(generate_opam_files true)
+ (depopts lwt))
