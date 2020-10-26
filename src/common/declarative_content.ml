@@ -1,4 +1,4 @@
-open Ezjs_min.Js
+open Ezjs_min
 
 class type condition = object end
 class type action = object end

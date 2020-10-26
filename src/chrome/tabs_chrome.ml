@@ -1,5 +1,5 @@
-open Ezjs_min.Js
-include Tabs_chrome_common
+open Ezjs_min
+include Chrome_common.Tabs
 
 let captureVisibleTab ?id ?options f =
   tabs##captureVisibleTab (Optdef.option id) (Optdef.option options)

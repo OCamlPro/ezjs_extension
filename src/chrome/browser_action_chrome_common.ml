@@ -1,6 +1,7 @@
-open Ezjs_min.Js
+open Ezjs_min
+open Extension_utils
 
-type uint8Array = Js_of_ocaml.Typed_array.uint8Array
+type uint8Array = Typed_array.uint8Array
 
 class type imageData = object
   method data : uint8Array t prop
@@ -50,10 +51,10 @@ class type browserAction = object
   method getBadgeBackgroundColor : tabDetails t -> (uint8Array t -> unit) callback -> unit meth
   method enable : int optdef -> (unit -> unit) callback optdef -> unit meth
   method disable : int optdef -> (unit -> unit) callback optdef -> unit meth
-  method onClicked : Tabs_utils.tab Browser_utils.event t prop
+  method onClicked : Tabs.tab Browser.event t prop
 end
 
 let browserAction : browserAction t = Unsafe.variable "chrome.browserAction"
 
 let onClicked f =
-  Browser_utils.addListener1 browserAction##.onClicked f
+  Browser.addListener1 browserAction##.onClicked f

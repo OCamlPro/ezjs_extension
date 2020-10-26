@@ -7,8 +7,9 @@ license: "LGPL-2.1"
 homepage: "https://github.com/ocamlpro/ezjs_extension"
 bug-reports: "https://github.com/ocamlpro/ezjs_extension/issues"
 depends: [
+  "ocaml" {>= "4.06"}
   "dune" {>= "2.0"}
-  "ezjs_min"
+  "ezjs_min" {>= "0.2"}
 ]
 depopts: ["lwt"]
 build: [

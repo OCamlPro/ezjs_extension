@@ -1,7 +1,6 @@
-open Ezjs_min
-open Js
-open Promise_lwt
-include Tabs_chrome_common
+open Ezjs_min_lwt
+open Promise
+include Chrome_common.Tabs
 
 let captureVisibleTab ?id ?options () =
   to_lwt_cb_tr to_string (fun cb ->

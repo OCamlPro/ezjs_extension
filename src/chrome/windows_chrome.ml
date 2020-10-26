@@ -1,5 +1,5 @@
-open Ezjs_min.Js
-include Windows_chrome_common
+open Ezjs_min
+include Chrome_common.Windows
 
 let get ?info id f = windows##get id (Optdef.option info) (wrap_callback f)
 let getCurrent ?info f = windows##getCurrent (Optdef.option info) (wrap_callback f)

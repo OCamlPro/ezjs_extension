@@ -1,7 +1,6 @@
-open Ezjs_min
-open Js
-open Promise_lwt
-include I18n_browser_common
+open Ezjs_min_lwt
+open Promise
+include Browser_common.I18n
 
 let getAcceptLanguages () =
   to_lwt i18n##getAcceptLanguages >>= function

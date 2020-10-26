@@ -1,4 +1,4 @@
-open Ezjs_min.Promise_lwt
+open Ezjs_min_lwt.Promise
 open Storage_local
 
 let to_lwt_cb_opt0 f callback =
@@ -18,3 +18,6 @@ let remove ?callback _st s =
   to_lwt_cb_opt0 (fun callback -> remove ~callback _st s) callback
 let clear ?callback _st =
   to_lwt_cb_opt0 (fun callback -> clear ~callback _st) callback
+
+let sync = ()
+let local = ()

@@ -1,7 +1,6 @@
-open Ezjs_min
-open Js
-open Promise_lwt
-include Runtime_chrome_common
+open Ezjs_min_lwt
+open Promise
+include Chrome_common.Runtime
 
 let getBackgroundPage () =
   to_lwt_cb (fun cb -> runtime##getBackgroundPage cb)
@@ -28,6 +27,6 @@ let sendNativeMessage ?callback application message =
     waiter >>= fun x -> return (Some (callback x))
   | None -> runtime##sendNativeMessage (string application) message undefined; Lwt.return_none
 let getPlatformInfo () =
-  to_lwt_cb_tr Runtime_utils.to_platform_info (fun cb -> runtime##getPlatformInfo cb)
+  to_lwt_cb_tr Extension_utils.Runtime.to_platform_info (fun cb -> runtime##getPlatformInfo cb)
 let getPackageDirectoryEntry () =
   to_lwt_cb (fun cb -> runtime##getPackageDirectoryEntry cb)

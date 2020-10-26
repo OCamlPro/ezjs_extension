@@ -1,5 +1,7 @@
-open Ezjs_min.Js
-open Browser_utils
+open Ezjs_min
+open Extension_utils
+open Browser
+
 
 class type window = object
   method id : int optdef prop
@@ -8,7 +10,7 @@ class type window = object
   method left : int optdef prop
   method width : int optdef prop
   method height : int optdef prop
-  method tabs : Tabs_utils.tab t js_array t optdef prop
+  method tabs : Tabs.tab t js_array t optdef prop
   method incognito : bool t prop
   method _type : js_string t optdef prop
   method state : js_string t optdef prop

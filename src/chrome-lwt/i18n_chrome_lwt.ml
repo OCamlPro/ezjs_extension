@@ -1,7 +1,6 @@
-open Ezjs_min
-open Js
-open Promise_lwt
-include I18n_chrome_common
+open Ezjs_min_lwt
+open Promise
+include Chrome_common.I18n
 
 let getAcceptLanguages () =
   to_lwt_cb_tr (to_listf to_string) i18n##getAcceptLanguages

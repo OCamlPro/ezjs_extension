@@ -10,4 +10,5 @@
   chrome_lwt)
  (optional)
  (preprocess (pps js_of_ocaml-ppx))
- (libraries chrome_common ezjs_min))
+ (libraries chrome_common ezjs_min.lwt lwt)
+ (modes byte))

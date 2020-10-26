@@ -1,5 +1,5 @@
-open Ezjs_min.Js
-open Ezjs_min.Promise
+open Ezjs_min
+open Promise
 
 class type storageChange = object
   method oldValue : 'a prop

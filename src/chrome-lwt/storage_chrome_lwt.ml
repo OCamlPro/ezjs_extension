@@ -1,7 +1,6 @@
-open Ezjs_min
-open Js
-open Promise_lwt
-include Storage_chrome_common
+open Ezjs_min_lwt
+open Promise
+include Chrome_common.Storage
 
 let get ?key (st:storageArea t) =
   to_lwt_cb (fun cb -> st##get (opt string key) cb)

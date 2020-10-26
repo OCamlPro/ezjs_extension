@@ -1,7 +1,6 @@
-open Ezjs_min
-open Js
-open Promise_lwt
-include Windows_browser_common
+open Ezjs_min_lwt
+open Promise
+include Browser_common.Windows
 
 let get ?info id = to_lwt (windows##get id (Optdef.option info))
 let getCurrent ?info () = to_lwt (windows##getCurrent (Optdef.option info))

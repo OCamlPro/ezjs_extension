@@ -1,4 +1,4 @@
-open Ezjs_min.Js
+open Ezjs_min
 
 class type language_percent = object
   method language : js_string t prop

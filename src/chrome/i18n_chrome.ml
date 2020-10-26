@@ -1,5 +1,5 @@
-open Ezjs_min.Js
-include I18n_chrome_common
+open Ezjs_min
+include Chrome_common.I18n
 
 let getAcceptLanguages f =
   i18n##getAcceptLanguages (wrap_callback (fun a -> f (of_listf string a)))

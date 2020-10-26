@@ -1,6 +1,6 @@
-open Ezjs_min.Js
-open Runtime_utils
-include Runtime_chrome_common
+open Ezjs_min
+open Extension_utils.Runtime
+include Chrome_common.Runtime
 
 let getBackgroundPage f = runtime##getBackgroundPage (wrap_callback f)
 let openOptionsPage ?callback () = runtime##openOptionsPage (optdef wrap_callback callback)

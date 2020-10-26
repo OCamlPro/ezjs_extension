@@ -1,4 +1,4 @@
-open Ezjs_min.Js
+open Ezjs_min
 
 let local_storage f =
   match Optdef.to_option Dom_html.window##.localStorage with
@@ -58,3 +58,6 @@ let remove ?callback _ s = local_storage @@ fun storage ->
 let clear ?callback _ = local_storage @@ fun storage ->
   storage##clear;
   match callback with None -> () | Some f -> f ()
+
+let sync = ()
+let local = ()

@@ -1,5 +1,5 @@
-open Ezjs_min.Js
-include Browser_action_chrome_common
+open Ezjs_min
+include Chrome_common.Browser_action
 
 let set_title ?id ?title ?callback () =
   let details : titleDetails t = Unsafe.obj [||] in

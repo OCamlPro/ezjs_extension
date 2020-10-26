@@ -1,4 +1,4 @@
-open Ezjs_min.Js
+open Ezjs_min
 open Tabs_utils
 
 class type requestCheckResponse = object

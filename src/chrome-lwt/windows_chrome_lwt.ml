@@ -1,7 +1,6 @@
-open Ezjs_min
-open Js
-open Promise_lwt
-include Windows_chrome_common
+open Ezjs_min_lwt
+open Promise
+include Chrome_common.Windows
 
 let get ?info id =
   to_lwt_cb (fun cb -> windows##get id (Optdef.option info) cb)

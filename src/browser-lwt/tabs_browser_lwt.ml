@@ -1,9 +1,9 @@
-open Ezjs_min
-open Js
-open Promise_lwt
-open Browser_utils
-open Runtime_utils
-open Tabs_utils
+open Ezjs_min_lwt
+open Promise
+open Extension_utils
+open Browser
+open Runtime
+open Tabs
 
 class type tabs = object
   method _TAB_ID_NONE : js_string t prop

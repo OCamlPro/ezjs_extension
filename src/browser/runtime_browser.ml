@@ -1,6 +1,6 @@
-open Ezjs_min.Js
-open Ezjs_min.Promise
-include Runtime_browser_common
+open Ezjs_min
+open Promise
+include Browser_common.Runtime
 
 let getBackgroundPage f = jthen runtime##getBackgroundPage f
 let openOptionsPage ?callback () =
@@ -15,6 +15,6 @@ let sendNativeMessage ?callback application message =
   jthen (runtime##sendNativeMessage (string application) message)
     (match callback with None -> (fun _ -> ()) | Some cb -> cb)
 let getPlatformInfo f =
-  jthen runtime##getPlatformInfo (fun o -> f (Runtime_utils.to_platform_info o))
+  jthen runtime##getPlatformInfo (fun o -> f (Extension_utils.Runtime.to_platform_info o))
 let getPackageDirectoryEntry f =
   jthen runtime##getPackageDirectoryEntry f

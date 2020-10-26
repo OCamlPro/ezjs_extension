@@ -1,6 +1,6 @@
-open Ezjs_min.Js
-open Ezjs_min.Promise
-include Tabs_browser_common
+open Ezjs_min
+open Promise
+include Browser_common.Tabs
 
 let captureTab ?id ?options f =
   jthen (tabs##captureTab (Optdef.option id) (Optdef.option options))

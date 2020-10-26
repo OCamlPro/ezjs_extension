@@ -1,6 +1,6 @@
-open Ezjs_min.Js
-open Ezjs_min.Promise
-include I18n_browser_common
+open Ezjs_min
+open Promise
+include Browser_common.I18n
 
 let getAcceptLanguages f =
   jthen i18n##getAcceptLanguages (fun a -> f (of_listf string a))

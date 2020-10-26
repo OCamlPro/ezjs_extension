@@ -1,6 +1,6 @@
-open Ezjs_min.Js
-open Browser_utils
-open Runtime_utils
+open Ezjs_min
+open Extension_utils.Browser
+open Extension_utils.Runtime
 
 class type onInstalledEvent = object
   method id : js_string t optdef prop

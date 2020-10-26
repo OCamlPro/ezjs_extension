@@ -1,4 +1,4 @@
-open Ezjs_min.Js
+open Ezjs_min
 
 class type ['a] event = object
   method addListener : ('a -> unit) -> unit meth

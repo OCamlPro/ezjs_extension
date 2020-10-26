@@ -1,6 +1,6 @@
-open Ezjs_min.Js
-open Ezjs_min.Promise
-include Browser_action_browser_common
+open Ezjs_min
+open Promise
+include Browser_common.Browser_action
 
 let get_title ?tabId ?windowId f =
   let details : tabDetails t = Unsafe.obj [||] in

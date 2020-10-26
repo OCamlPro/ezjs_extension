@@ -10,8 +10,13 @@
 
 (maintainers "OCamlPro <contact@ocamlpro.com>")
 
+(generate_opam_files true)
+
 (package
  (name ezjs_extension)
  (synopsis "Binding for Chrome and Firefox extension API")
- (depends ezjs_min)
+ (depends
+  (ocaml (>= 4.06))
+  (dune (>= 2.0))
+  (ezjs_min (>= 0.2)))
  (depopts lwt))

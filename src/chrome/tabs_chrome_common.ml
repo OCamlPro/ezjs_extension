@@ -1,7 +1,8 @@
-open Ezjs_min.Js
-open Browser_utils
-open Runtime_utils
-open Tabs_utils
+open Ezjs_min
+open Extension_utils
+open Browser
+open Runtime
+open Tabs
 
 let make_create ?active ?index ?openerTabId ?pinned ?selected ?url ?windowId () =
   let tab : createProperties t = Unsafe.obj [||] in

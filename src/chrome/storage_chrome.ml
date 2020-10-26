@@ -1,5 +1,5 @@
-open Ezjs_min.Js
-include Storage_chrome_common
+open Ezjs_min
+include Chrome_common.Storage
 
 let get ?key (st:storageArea t) f = st##get (opt string key) (wrap_callback f)
 let get_arr ?keys (st:storageArea t) f =

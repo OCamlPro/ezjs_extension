@@ -1,6 +1,6 @@
-open Ezjs_min.Js
-open Ezjs_min.Promise
-include Storage_browser_common
+open Ezjs_min
+open Promise
+include Browser_common.Storage
 
 let get ?key (st:storageArea t) f = jthen (st##get (opt string key)) f
 let get_arr ?keys (st:storageArea t) f =

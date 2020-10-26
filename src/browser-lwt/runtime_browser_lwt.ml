@@ -1,7 +1,6 @@
-open Ezjs_min
-open Js
-open Promise_lwt
-include Runtime_browser_common
+open Ezjs_min_lwt
+open Promise
+include Browser_common.Runtime
 
 let getBackgroundPage () = to_lwt_exn runtime##getBackgroundPage
 let openOptionsPage ?callback () =
@@ -15,6 +14,6 @@ let sendMessage ?id ?options ?callback message =
 let sendNativeMessage ?callback application message =
   to_lwt_exn_opt callback @@ runtime##sendNativeMessage (string application) message
 let getPlatformInfo () =
-  to_lwt_exn_tr Runtime_utils.to_platform_info runtime##getPlatformInfo
+  to_lwt_exn_tr Extension_utils.Runtime.to_platform_info runtime##getPlatformInfo
 let getPackageDirectoryEntry () =
   to_lwt_exn runtime##getPackageDirectoryEntry

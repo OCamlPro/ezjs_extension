@@ -1,6 +1,6 @@
-open Ezjs_min.Js
-open Ezjs_min.Promise
-include Windows_browser_common
+open Ezjs_min
+open Promise
+include Browser_common.Windows
 
 let get ?info id f = jthen (windows##get id (Optdef.option info)) f
 let getCurrent ?info f = jthen (windows##getCurrent (Optdef.option info)) f

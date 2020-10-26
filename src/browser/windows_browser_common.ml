@@ -1,6 +1,7 @@
-open Ezjs_min.Js
-open Ezjs_min.Promise
-open Browser_utils
+open Ezjs_min
+open Promise
+open Extension_utils
+open Browser
 
 class type window = object
   method alwaysOnTop : bool t prop
@@ -11,7 +12,7 @@ class type window = object
   method left : int optdef prop
   method sessionId : js_string t optdef prop
   method state : js_string t optdef prop
-  method tabs : Tabs_utils.tab t js_array t optdef prop
+  method tabs : Tabs.tab t js_array t optdef prop
   method title : js_string t optdef prop
   method top : int optdef prop
   method _type : js_string t optdef prop
