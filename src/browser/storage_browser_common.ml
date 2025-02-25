@@ -23,7 +23,7 @@ class type storage = object
   method managed : storageArea t prop
 end
 
-let storage : storage t = Unsafe.variable "browser.storage"
+let storage : storage t = Unsafe.global##.browser##.storage
 let local = storage##.local
 let sync = storage##.sync
 let managed = storage##.managed

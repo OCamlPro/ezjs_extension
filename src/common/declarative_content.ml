@@ -54,7 +54,7 @@ class type declarativeContent = object
   method onPageChanged : declarativeEvent t prop
 end
 
-let declarativeContent : declarativeContent t = Unsafe.variable "chrome.declarativeContent"
+let declarativeContent : declarativeContent t = Unsafe.global##.chrome##.declarativeContent
 
 let make_pageUrl
     ?hostContains ?hostEquals ?hostPrefix ?hostSuffix ?pathContains ?pathPrefix

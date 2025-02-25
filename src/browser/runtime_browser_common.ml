@@ -40,7 +40,7 @@ class type runtime = object
   method onRestartRequired : js_string t event t prop
 end
 
-let runtime : runtime t = Unsafe.variable "browser.runtime"
+let runtime : runtime t = Unsafe.global##.browser##.runtime
 
 let last_error () = runtime##.lastError
 let id () = runtime##.id

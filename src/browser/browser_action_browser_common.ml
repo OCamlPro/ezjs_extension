@@ -60,7 +60,7 @@ class type browserAction = object
   method onClicked : Tabs.tab Browser.event t prop
 end
 
-let browserAction : browserAction t = Unsafe.variable "chrome.browserAction"
+let browserAction : browserAction t = Unsafe.global##.chrome##browserAction
 
 let set_title ?tabId ?windowId ?title () =
   let details : titleDetails t = Unsafe.obj [||] in

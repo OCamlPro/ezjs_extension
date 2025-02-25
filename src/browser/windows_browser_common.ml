@@ -104,7 +104,7 @@ let make_updateInfo ?left ?top ?width ?height ?focused ?drawAttention ?state
   data##.titlePreface := optdef string titlePreface;
   data
 
-let windows : windows t = Unsafe.variable "browser.windows"
+let windows : windows t = Unsafe.global##.browser##.windows
 
 let onCreated handler =
   addListener1 windows##.onCreated handler

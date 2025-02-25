@@ -64,7 +64,7 @@ class type tabs = object
   method onUpdated : (int, 'a t, tab t) event3 t prop
   method onZoomChanged : 'a t event t prop
 end
-let tabs : tabs t = Unsafe.variable "browser.tabs"
+let tabs : tabs t = Unsafe.global##.browser##.tabs
 let tab_id_none () = tabs##._TAB_ID_NONE
 
 let connect ?info id = tabs##connect id (Optdef.option info)

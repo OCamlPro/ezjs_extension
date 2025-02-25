@@ -18,5 +18,6 @@
  (depends
   (ocaml (>= 4.06))
   (dune (>= 2.0))
-  (ezjs_min (>= 0.2)))
+  (ezjs_min (>= 0.2))
+  (js_ocaml (>= 6.0.0)))
  (depopts lwt))

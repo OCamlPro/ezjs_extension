@@ -54,7 +54,7 @@ class type browserAction = object
   method onClicked : Tabs.tab Browser.event t prop
 end
 
-let browserAction : browserAction t = Unsafe.variable "chrome.browserAction"
+let browserAction : browserAction t = Unsafe.global##.chrome##.browserAction
 
 let onClicked f =
   Browser.addListener1 browserAction##.onClicked f

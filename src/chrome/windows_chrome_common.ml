@@ -91,7 +91,7 @@ let make_updateInfo ?left ?top ?width ?height ?focused ?drawAttention ?state () 
   data##.state := optdef string state;
   data
 
-let windows : windows t = Unsafe.variable "chrome.windows"
+let windows : windows t = Unsafe.global##.chrome##.windows
 
 let onCreated handler =
   addListener1 windows##.onCreated handler

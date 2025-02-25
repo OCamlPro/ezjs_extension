@@ -54,7 +54,7 @@ class type tabs = object
   method onZoomChanged : 'a t event t prop
 end
 
-let tabs : tabs t = Unsafe.variable "chrome.tabs"
+let tabs : tabs t = Unsafe.global##.chrome##.tabs
 let tab_id_none () = tabs##._TAB_ID_NONE
 
 let connect ?info id = tabs##connect id (Optdef.option info)

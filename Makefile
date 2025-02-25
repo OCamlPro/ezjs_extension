@@ -1,13 +1,13 @@
 all: build
 
 build:
-	dune build
+	@dune build
 
 clean:
-	dune clean
+	@dune clean
 
 install:
-	dune install
+	@dune install
 
 doc:
-	dune build @doc
+	@dune build @doc

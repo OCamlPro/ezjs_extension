@@ -18,7 +18,7 @@ class type i18n = object
   method detectLanguage : js_string t -> language_detection t promise t meth
 end
 
-let i18n = Unsafe.variable "browser.i18n"
+let i18n = Unsafe.global##.browser##.i18n
 
 let getMessage ?substitutions message =
   to_string (i18n##getMessage (string message) (optdef (of_listf string) substitutions))

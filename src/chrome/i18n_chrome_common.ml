@@ -17,7 +17,7 @@ class type i18n = object
   method detectLanguage : js_string t -> (language_detection t -> unit) callback -> unit meth
 end
 
-let i18n = Unsafe.variable "chrome.i18n"
+let i18n = Unsafe.global##.chrome##.i18n
 
 let getMessage ?substitutions message =
   to_string (i18n##getMessage (string message) (optdef (of_listf string) substitutions))
