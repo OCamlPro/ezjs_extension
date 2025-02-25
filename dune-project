@@ -1,10 +1,10 @@
-(lang dune 2.0)
+(lang dune 2.7)
 
 (name ezjs_extension)
 
 (source (github ocamlpro/ezjs_extension))
 
-(license LGPL-2.1)
+(license LGPL-2.1-only)
 
 (authors "Maxime Levillain <maxime.levillain@ocamlpro.com>")
 
@@ -19,5 +19,5 @@
   (ocaml (>= 4.06))
   (dune (>= 2.0))
   (ezjs_min (>= 0.2))
-  (js_ocaml (>= 6.0.0)))
+  (js_of_ocaml (>= 6.0.0)))
  (depopts lwt))
